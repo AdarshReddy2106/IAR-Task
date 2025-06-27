@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Signupform() {
+function SignInform({ onSignInSuccess }) {
   const [step, setStep] = useState('email');
   const [email, setEmail] = useState('');
   const [otp, setOtp] = useState('');
@@ -17,6 +17,7 @@ function Signupform() {
   const handleOtpSubmit = (e) => {
     e.preventDefault();
     if (otp === generatedOtp) {
+      if (onSignInSuccess) onSignInSuccess();
       setStep('success');
     } else {
       alert('Invalid OTP. Try again.');
@@ -49,9 +50,8 @@ function Signupform() {
           <button type="submit">Verify OTP</button>
         </form>
       )}
-      {step === 'success' && <div>Sign-In Successful!</div>}
     </div>
   );
 }
 
-export default Signupform;
+export default SignInform;
