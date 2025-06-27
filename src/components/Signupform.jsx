@@ -11,7 +11,7 @@ function Signupform() {
     const newOtp = Math.floor(Math.random() * 999999).toString();
     setGeneratedOtp(newOtp);
     setStep('otp');
-    console.log(`OTP for ${email}: ${newOtp}`); // Dummy OTP "send"
+    console.log(`OTP for ${email}: ${newOtp}`); // Sending Dummy OTP 
   };
 
   const handleOtpSubmit = (e) => {
