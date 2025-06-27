@@ -1,20 +1,14 @@
 // import logo from './logo.svg';
 import './App.css';
-
-
-function Signup() {
-  return (
-    <button>Signup</button>
-  )
-}
+import Signupform from './components/Signupform';
 
 function App() {
   return (
     <div className="App">
-      <header>
+      <header className="App-header">
          Welcome
       </header>
-      <Signup/>
+      <Signupform />
     </div>
   );
 }
