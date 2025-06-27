@@ -1,23 +1,37 @@
 // import logo from './logo.svg';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import Signupform from './components/Signupform';
+import SignInform from './components/SignInform';
+import ProfilePage from './components/ProfilePage';
 import AdminDashboard from './components/AdminDashboard';
 
 function App() {
-  const [showSignup, setShowSignup] = useState(false);
+  const [showSignIn, setShowSignIn] = useState(false);
+  const [signedIn, setSignedIn] = useState(false);
+  const [showDashboard, setShowDashboard] = useState(false); // false = Profile, true = Dashboard
 
   return (
     <div className="App">
       <header className="App-header">
          Welcome
       </header>
-      {!showSignup ? (
-        <button onClick={() => setShowSignup(true)}>Sign Up</button>
+      {signedIn ? (
+        <div>
+          <div style={{ marginBottom: 16 }}>
+            <button onClick={() => setShowDashboard(false)} style={{ marginRight: 8 }}>
+              Profile Page
+            </button>
+            <button onClick={() => setShowDashboard(true)}>
+              Admin Dashboard
+            </button>
+          </div>
+          {showDashboard ? <AdminDashboard /> : <ProfilePage />}
+        </div>
+      ) : !showSignIn ? (
+        <button onClick={() => setShowSignIn(true)}>Sign In</button>
       ) : (
-        <Signupform />
+        <SignInform onSignInSuccess={() => setSignedIn(true)} />
       )}
-      <AdminDashboard/>
     </div>
   );
 }
