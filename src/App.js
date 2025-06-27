@@ -2,6 +2,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import Signupform from './components/Signupform';
+import AdminDashboard from './components/AdminDashboard';
 
 function App() {
   const [showSignup, setShowSignup] = useState(false);
@@ -16,6 +17,7 @@ function App() {
       ) : (
         <Signupform />
       )}
+      <AdminDashboard/>
     </div>
   );
 }
