@@ -5,6 +5,8 @@ import SignInform from './components/SignInform';
 import ProfilePage from './components/ProfilePage';
 import AdminDashboard from './components/AdminDashboard';
 import ContactForm from './components/Contact'; 
+import ImageSlider from './components/ImageSlider';
+import Testimonials from './components/Testimonials';
 
 function App() {
   const [showSignIn, setShowSignIn] = useState(false);
@@ -23,6 +25,8 @@ function App() {
       <header className="App-header">
          Welcome
       </header>
+      <ImageSlider />
+      <Testimonials />
       {signedIn ? (
         isAdmin ? (
           <AdminDashboard />

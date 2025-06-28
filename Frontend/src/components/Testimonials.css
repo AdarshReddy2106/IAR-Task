@@ -1,0 +1,25 @@
+.testimonials-container {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+.testimonials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.testimonial-card {
+  flex: 1 1 220px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.testimonial-message {
+  font-style: italic;
+}
+.testimonial-name {
+  font-weight: bold;
+}
+.testimonial-year {
+  color: #888;
+}
