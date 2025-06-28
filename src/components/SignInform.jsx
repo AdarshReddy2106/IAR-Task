@@ -17,7 +17,7 @@ function SignInform({ onSignInSuccess }) {
   const handleOtpSubmit = (e) => {
     e.preventDefault();
     if (otp === generatedOtp) {
-      if (onSignInSuccess) onSignInSuccess();
+      if (onSignInSuccess) onSignInSuccess(email); // Pass email to parent
       setStep('success');
     } else {
       alert('Invalid OTP. Try again.');

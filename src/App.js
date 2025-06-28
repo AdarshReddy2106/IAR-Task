@@ -8,7 +8,14 @@ import AdminDashboard from './components/AdminDashboard';
 function App() {
   const [showSignIn, setShowSignIn] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
-  const [showDashboard, setShowDashboard] = useState(false); // false = Profile, true = Dashboard
+  const [userEmail, setUserEmail] = useState('');
+
+  const handleSignInSuccess = (email) => {
+    setSignedIn(true);
+    setUserEmail(email);
+  };
+
+  const isAdmin = userEmail === "adarshreddy2106@gmail.com";
 
   return (
     <div className="App">
@@ -16,21 +23,15 @@ function App() {
          Welcome
       </header>
       {signedIn ? (
-        <div>
-          <div style={{ marginBottom: 16 }}>
-            <button onClick={() => setShowDashboard(false)} style={{ marginRight: 8 }}>
-              Profile Page
-            </button>
-            <button onClick={() => setShowDashboard(true)}>
-              Admin Dashboard
-            </button>
-          </div>
-          {showDashboard ? <AdminDashboard /> : <ProfilePage />}
-        </div>
+        isAdmin ? (
+          <AdminDashboard />
+        ) : (
+          <ProfilePage />
+        )
       ) : !showSignIn ? (
         <button onClick={() => setShowSignIn(true)}>Sign In</button>
       ) : (
-        <SignInform onSignInSuccess={() => setSignedIn(true)} />
+        <SignInform onSignInSuccess={handleSignInSuccess} />
       )}
     </div>
   );
