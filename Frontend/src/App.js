@@ -4,6 +4,7 @@ import './App.css';
 import SignInform from './components/SignInform';
 import ProfilePage from './components/ProfilePage';
 import AdminDashboard from './components/AdminDashboard';
+import ContactForm from './components/Contact'; 
 
 function App() {
   const [showSignIn, setShowSignIn] = useState(false);
@@ -26,7 +27,10 @@ function App() {
         isAdmin ? (
           <AdminDashboard />
         ) : (
-          <ProfilePage />
+          <>
+            <ProfilePage />
+            <ContactForm />
+          </>
         )
       ) : !showSignIn ? (
         <button onClick={() => setShowSignIn(true)}>Sign In</button>
