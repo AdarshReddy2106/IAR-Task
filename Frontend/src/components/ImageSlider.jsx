@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './ImageSlider.css';
 
 const images = [
-  'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80'
+  require('../images/Saraswati Block-1.jpg'),
+  require('../images/hostel1.jpg'),
+  require('../images/IMG-20240823-WA0016.jpg'),
+  require('../images/entrance.jpg'),
+  require('../images/IMG-20240823-WA0017.jpg'),
 ];
 
 function ImageSlider() {
