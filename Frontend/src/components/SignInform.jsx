@@ -29,6 +29,7 @@ function SignInform({ onSignInSuccess }) {
       {step === 'email' && (
         <form onSubmit={handleEmailSubmit}>
           <input
+            className='input-field'
             type="email"
             placeholder="Enter your email"
             value={email}
@@ -39,8 +40,9 @@ function SignInform({ onSignInSuccess }) {
         </form>
       )}
       {step === 'otp' && (
-        <form onSubmit={handleOtpSubmit}>
+        <form onSubmit={handleOtpSubmit} className='form'>
           <input
+          className='input-field'
             type="text"
             placeholder="Enter OTP"
             value={otp}

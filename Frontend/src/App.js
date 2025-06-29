@@ -23,10 +23,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-         Welcome
+         IAR Cell  Recruitment Task
       </header>
-      <ImageSlider />
-      <Testimonials />
       {signedIn ? (
         isAdmin ? (
           <AdminDashboard />
@@ -40,6 +38,12 @@ function App() {
         <button onClick={() => setShowSignIn(true)}>Sign In</button>
       ) : (
         <SignInform onSignInSuccess={handleSignInSuccess} />
+      )}
+      {!signedIn && !showSignIn && (
+        <>
+          <ImageSlider />
+          <Testimonials />
+        </>
       )}
     </div>
   );
