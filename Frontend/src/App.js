@@ -5,7 +5,7 @@ import SignInform from './components/SignInform';
 import ProfilePage from './components/ProfilePage';
 import AdminDashboard from './components/AdminDashboard';
 import ContactForm from './components/Contact'; 
-import ImageSlider from './components/ImageSlider';
+import Swap from './components/swap';
 import Testimonials from './components/Testimonials';
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
       )}
       {!signedIn && !showSignIn && (
         <>
-          <ImageSlider />
+          <Swap />
           <Testimonials />
         </>
       )}

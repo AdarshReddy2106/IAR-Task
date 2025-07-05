@@ -26,7 +26,6 @@ function AdminDashboard() {
               <button>Delete</button>
             </td>
           </tr>
-          {/* Add more dummy rows as needed */}
         </tbody>
       </table>
     </div>

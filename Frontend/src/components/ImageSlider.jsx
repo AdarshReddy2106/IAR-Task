@@ -22,13 +22,13 @@ function ImageSlider() {
 
   return (
     <div className="image-slider-container">
-      <button className="image-slider-arrow left" onClick={prevSlide}>&#8592;</button>
+      <button className="image-slider-arrow left" onClick={prevSlide}>‹</button>
       <img
         src={images[index]}
         alt="Campus"
         className="image-slider-img"
       />
-      <button className="image-slider-arrow right" onClick={nextSlide}>&#8594;</button>
+      <button className="image-slider-arrow right" onClick={nextSlide}>›</button>
       <div className="image-slider-dots">
         {images.map((_, i) => (
           <span

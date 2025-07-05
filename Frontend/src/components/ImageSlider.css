@@ -1,11 +1,11 @@
 .image-slider-container {
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 0;
   position: relative;
 }
 .image-slider-img {
-  width: 100%;
-  height: 350px;
+  width: 800px;
+  height: 450px;
   object-fit: cover;
   border-radius: 12px;
 }
@@ -31,13 +31,12 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.7);
+  background: transparent;
   border: none;
+  margin: 0;
   font-size: 2rem;
   cursor: pointer;
   z-index: 2;
-  padding: 0 12px;
-  border-radius: 50%;
   transition: background 0.2s;
 }
 .image-slider-arrow.left {
@@ -47,5 +46,5 @@
   right: 10px;
 }
 .image-slider-arrow:hover {
-  background: #eee;
+  background: #0c0202;
 }

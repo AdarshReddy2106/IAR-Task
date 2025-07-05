@@ -1,0 +1,61 @@
+.play-pause-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.play-pause-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-pause-button:hover {
+    background: rgba(0, 0, 0, 0.95);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-pause-button:focus {
+    outline: 2px solid white;
+}
+
+/* Play icon (triangle) */
+.play-icon {
+    width: 0;
+    height: 0;
+    border-left: 12px solid white;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    margin-left: 3px; /* Slight offset to center visually */
+}
+
+/* Pause icon (two rectangles) */
+.pause-icon {
+    display: flex;
+    gap: 3px;
+}
+
+.pause-icon::before,
+.pause-icon::after {
+    content: '';
+    width: 4px;
+    height: 16px;
+    background: white;
+}
